@@ -24,7 +24,7 @@ const Auth  = observer(class Auth extends React.Component{
 
   handlesignUp = () => {
     if(this.state.passwdAgain !== this.state.passwd){
-      console.log("Passwords Does Not Match")
+      alert("Passwords Does Not Match")
     }
     else {
       let newUser = {
@@ -40,7 +40,7 @@ const Auth  = observer(class Auth extends React.Component{
         MainStore.token = res.data.token
         MainStore.pageNum= 1
       })
-      .catch(err => console.log(err))
+      .catch(err => alert("Unable To Create New User"))
     }
    
   }
@@ -56,7 +56,7 @@ const Auth  = observer(class Auth extends React.Component{
       MainStore.token = res.data.token
       MainStore.pageNum = 1;
     })
-    .catch(err => console.log(err))
+    .catch(err => alert("An error accured"))
    
   }
 

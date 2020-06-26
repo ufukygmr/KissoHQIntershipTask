@@ -26,7 +26,7 @@ const Profile = observer(class Profile extends React.Component{
             console.log("geldiler12")
             MainStore.me = res.data
         })
-        .catch(err => console.log(err))
+        .catch(err => alert("Unable to Retrieve User"))
     }
 
     handlePassword = () => {
@@ -42,7 +42,7 @@ const Profile = observer(class Profile extends React.Component{
         .then(res=> {
             console.log(res)
         })
-        .catch(err => console.log(err))
+        .catch(err => alert("Uups! An error accured while changing Password"))
     }
 
 

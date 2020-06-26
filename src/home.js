@@ -30,7 +30,7 @@ const Home = observer(class Home extends React.Component{
             console.log("geldiler")
             MainStore.users = res.data.result
         })
-        .catch(err => console.log(err))
+        .catch(err => alert("Uups! An error accured while retrieving all users"))
     }
 
     handleDelete = (email) => {
@@ -57,7 +57,7 @@ const Home = observer(class Home extends React.Component{
         .then(res=> {
             this.getAll()
         })
-        .catch(err => console.log(err))
+        .catch(err => alert("Unable to Create New User"))
        
       }
 
